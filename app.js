@@ -22,7 +22,7 @@ var createNewTaskElement=function(taskString){
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
     //label
-    var label=document.createElement("label");//label
+    var span=document.createElement("span");//label
     //input (text)
     var editInput=document.createElement("input");//text
     //button.edit
@@ -32,8 +32,8 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
-    label.innerText=taskString;
-    label.className='task';
+    span.innerText=taskString;
+    span.className='task';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
@@ -83,7 +83,7 @@ var editTask=function(){
     var listItem=this.parentNode;
 
     var editInput=listItem.querySelector('input[type=text]');
-    var label=listItem.querySelector("label");
+    var span=listItem.querySelector("span");
     var editBtn=listItem.querySelector(".edit");
     var containsClass=listItem.classList.contains("editMode");
     //If class of the parent is .editmode
@@ -91,10 +91,10 @@ var editTask=function(){
 
         //switch to .editmode
         //label becomes the inputs value.
-        label.innerText=editInput.value;
+        span.innerText=editInput.value;
         editBtn.innerText="Edit";
     }else{
-        editInput.value=label.innerText;
+        editInput.value=span.innerText;
         editBtn.innerText="Save";
     }
 
