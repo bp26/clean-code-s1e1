@@ -147,7 +147,7 @@
 
 .task-list__item_edit .task-list__input {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
 .task-list__item_edit .task-list__name {
