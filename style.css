@@ -1,0 +1,155 @@
+/* Basic Style */
+.page {
+  background-color: #f8f8f8;
+  color: #333;
+  font-family: Lato, sans-serif;
+}
+.header__wrapper {
+  width: 500px;
+  margin: 0 auto;
+  display: block;
+  text-align: right;
+}
+.header__image {
+  width: 100%;
+}
+.header__link {
+  font-family: fantasy, cursive;
+  position: relative;
+  top: -3px;
+}
+
+@media (max-width: 768px) {
+
+  .header__wrapper { 
+    text-align: center;
+  }
+
+}
+.main {
+  display: block;
+  width: 500px;
+  margin: 0 auto 0;
+}
+.task-wrapper {
+  display: flex;
+  margin-bottom: 16px;
+}
+.input,
+.task-list__name {
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
+}
+.task-list {
+  margin: 0;
+  padding: 0px;
+}
+.task-list__item, 
+.title {
+  list-style: none;
+}
+.input,
+.button{
+  outline: none;
+}
+.button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+.button:hover {
+  color: #3a3a3a;
+}
+/* Heading */
+.title {
+  color: #333;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.title_upper {
+  display: block;
+  margin: 13px 0px 20px;
+}
+.input {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 19px;
+  padding: 0 9px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+.input:focus {
+  color: #333;
+}
+
+/* New Task */
+.task-wrapper__input {
+  width: 318px;
+}
+
+/* Task list */
+.task-list__item {
+  overflow: hidden;
+  padding: 18.5px 0;
+  border-bottom: 1px solid #eee;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list__checkbox {
+  margin: 0 10px;
+}
+
+.task-list__name {
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  width: 226px;
+}
+.task-list__input {
+  width: 226px;
+}
+
+.button__remove-image {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform 200ms ease-in;
+}
+.button__remove-image:hover {
+  transform: rotateZ(0);
+}
+
+/* Completed */
+.task-list_complete .task-list__name {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Edit Task */
+.task-list__input {
+  display: none;
+}
+
+.task-list__item_edit .task-list__input {
+  display: inline-block;
+  width: 224px;
+}
+
+.task-list__item_edit .task-list__name {
+  display: none;
+}
